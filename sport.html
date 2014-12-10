@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>齿轮</title>
+    <style>
+        html,body{margin:0;padding:0;width:100%;}
+        #wrap{margin:0;padding:150px;}
+        .post{width:100px;height:100px;background:#0099ff;border-radius:200px;display:block;position:relative;}
+        .post span{width:126px;height:16px;display:inline-block;background:#0099ff;position:absolute;top:42px;left:-13px;border-radius:5px;}
+        .s1{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);}
+        .s2{-webkit-transform:rotate(30deg);-moz-transform:rotate(30deg);}
+        .s3{-webkit-transform:rotate(60deg);-moz-transform:rotate(60deg);}
+        .s4{-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg);}
+        .s5{-webkit-transform:rotate(120deg);-moz-transform:rotate(120deg);}
+        .s6{-webkit-transform:rotate(150deg);-moz-transform:rotate(150deg);}
+        .y1{width:60px;height:60px;left:80px;top:0px;}
+        .y1 span{width:88px;height:8px;display:inline-block;background:#0099ff;position:absolute;top:26px;left:-14px;border-radius:8px;}
+        .y0{-webkit-animation-name:slide1;-webkit-animation-duration:10s;-webkit-animation-iteration-count:infinite;-webkit-animation-timing-function:linear;-moz-animation-name:slide1;-moz-animation-duration:10s;-moz-animation-iteration-count:infinite;-moz-animation-timing-function:linear;}
+        @-webkit-keyframes slide1{
+            0%{-webkit-transform:rotate(0deg);}
+            50%{-webkit-transform:rotate(180deg);}
+            100%{-webkit-transform:rotate(360deg);}
+        }
+        @-moz-keyframes slide1{
+            0%{-moz-transform:rotate(0deg);}
+            50%{-moz-transform:rotate(180deg);}
+            100%{-moz-transform:rotate(360deg);}
+        }
+        .y1{-webkit-animation-name:slide2;-webkit-animation-duration:10s;-webkit-animation-iteration-count:infinite;-webkit-animation-timing-function:linear;-moz-animation-name:slide2;-moz-animation-duration:10s;-moz-animation-iteration-count:infinite;-moz-animation-timing-function:linear;}
+        @-webkit-keyframes slide2{
+            0%{-webkit-transform:rotate(0deg);}
+            50%{-webkit-transform:rotate(-180deg);}
+            100%{-webkit-transform:rotate(-360deg);}
+        }
+        @-moz-keyframes slide2{
+            0%{-moz-transform:rotate(0deg);}
+            50%{-moz-transform:rotate(-180deg);}
+            100%{-moz-transform:rotate(-360deg);}
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div class="post y0">
+        <span class="s1"></span>
+        <span class="s2"></span>
+        <span class="s3"></span>
+        <span class="s4"></span>
+        <span class="s5"></span>
+        <span class="s6"></span>
+    </div>
+    <div class="post y1">
+        <span class="s1"></span>
+        <span class="s2"></span>
+        <span class="s3"></span>
+        <span class="s4"></span>
+        <span class="s5"></span>
+        <span class="s6"></span>
+    </div>
+</div>
+<style>
+    .box{
+        width:120px;
+        height:120px;
+        border:1px dashed #f90;
+        position:relative;
+    }
+    .box:before{
+        content: 'fddsf';
+        width:120px;
+        height:120px;
+        background:#008000;
+        display:block;
+        border-radius:50%;
+        position:absolute;
+        left:0px;
+        top:0px;
+
+    }
+    .box div{
+        position:absolute;
+        left:-16%;
+        top:39%;
+        width:160px;
+        height:16px;
+        border-radius: 10px;
+        background:#008000;
+    }
+    div:nth-of-type(1){
+        -webkit-transform:rotate(30deg);
+    }
+    div:nth-of-type(2){
+        -webkit-transform:rotate(60deg);
+    }
+    div:nth-of-type(3){
+        -webkit-transform:rotate(90deg);
+    }
+    div:nth-of-type(4){
+        -webkit-transform:rotate(120deg);
+    }
+    div:nth-of-type(5){
+        -webkit-transform:rotate(150deg);
+    }
+    div:nth-of-type(6){
+        -webkit-transform:rotate(180deg);
+    }
+    @-webkit-keyframes trun{
+      from{
+          -webkit-transform:rotateY(0deg);
+      }
+      to{
+          -webkit-transform:rotateY(360deg);
+      }
+    }
+    @-webkit-keyframes trun2{
+        from{
+            -webkit-transfrom:rotate(0deg);
+        }
+        to{
+            -webkit-transform: rotate(-360deg);
+        }
+    }
+    .big{
+
+        -webkit-animation-name: trun;
+        -webkit-animation-delay: .2s;
+        -webkit-animation-timing-function:linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-duration:6s;
+    }
+    .small{
+        left:54px; top:0px;
+        -webkit-animation-name: trun2;
+        -webkit-animation-delay: .2s;
+        -webkit-animation-timing-function:linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-duration:6s;
+    }
+    div.small{
+        width:100px;
+        height:100px;
+    }
+    div.small div{
+        width:100px;
+        height:10px;
+        left:0%;
+        top:42%;
+    }
+    div.small:before{
+        width:50px;
+        height:50px;
+        left:25%;
+        top:25%;
+    }
+
+    @-webkit-keyframes speed {
+        10% {
+            -webkit-transform: translate(-2px, -3px);
+            transform: translate(-2px, -3px);
+            height:10px;
+        }
+
+        25% {
+            -webkit-transform: translate(2px, -3px);
+            transform: translate(2px, -3px);
+            height:20px;
+        }
+
+        50% {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+            height:30px;
+        }
+
+        75% {
+            -webkit-transform: translate(-2px, 3px);
+            transform: translate(-2px, 3px)
+        height:40px;
+        }
+
+        90% {
+            -webkit-transform: translate(2px, 3px);
+            transform: translate(2px, 3px);
+            height:50px;
+        }
+    }
+
+</style>
+<div class="box big">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="box small">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<style>
+    body{
+
+
+    }
+    .b-arrow{
+        width:122px;
+        height:60px;
+        background:url(images/b_arrow.png) no-repeat;
+        position:absolute;
+        left:50%;
+        bottom:120px;
+        -webkit-animation-name:guideTop;
+        -webkit-animation-delay: .2s;
+        -webkit-animation-timing-functon:ease-in-out;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count:infinite;
+    }
+    @-webkit-keyframes guideTop{
+        0%{
+            opacity:1;
+            -webkit-transform:translateY(0px);
+        }
+        50%{
+            opacity:1;
+            -webkit-transform:translateY(-30px);
+            opacity:.5;
+        }
+        100%{
+            opacity:1;
+            -webkit-transform:translateY(-60px);
+            opacity:0
+        }
+    }
+    #box{
+        height:200px;
+    }
+    #box span{
+        width:20px;
+        height:20px;
+        background:#f90;
+        border-radius:50%;
+        display:inline-block;
+        margin:0 20px;
+        -webkit-animation-name:amplify;
+        -webkit-animation-duration:1.5s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-transform:scale(0);
+    }
+    @-webkit-keyframes amplify{
+        0%{
+            -webkit-transform:scale(0);
+        }
+        50%{
+            -webkit-transform:scale(1.6);
+        }
+        100%{
+            -webkit-transform:scale(0);
+        }
+    }
+    #box span:nth-of-type(2){
+        -webkit-animation-delay: .16s;
+    }
+    #box span:nth-of-type(3){
+        -webkit-animation-delay: .32s;
+    }
+    #d{
+        width:800px;
+        height:600px;
+         -webkit-transform: perspective(500px);
+         -webkit-transform-style: preserve-3d;
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin:-300px -400px;
+
+        -webkit-animation-name:trun;
+        -webkit-animation-duration:4s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count:infinite;
+        -webkit-transform: perspective(1500px) rotateY(60deg);
+
+
+
+
+
+    }
+    .d span{
+        width:200px;
+        height:100px;
+         border:1px solid #f90;
+
+         position:absolute;
+        -webkit-transform-style:preserve-3d;
+         left:50%;
+        background-image:-webkit-linear-gradient(rgba(185,224,189,0.5),rgba(255,255,255,0));
+         top:50%;
+
+        -webkit-transform: translate3d(50px, 50px, 200px);
+    }
+    #d span:nth-of-type(1){
+        -webkit-transform-style:perserve-3d;
+        -webkit-transform:translate3d(200px ,20px, 300px) scale(1.3);
+    }
+    #d span:nth-of-type(2){
+        -webkit-transform-style:perserve-3d;
+        -webkit-transform:translate3d(0 ,-100px, -300px) scale(1.3);
+    }
+    #d span:nth-of-type(3){
+        -webkit-transform-style:perserve-3d;
+        -webkit-transform:translate3d(0 ,200px, 100px) scale(1.3);
+    }
+#speed{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:50px;
+    height:0px;
+    border:10px solid #f00;
+    border-radius:50%;
+    -webkit-animation-name:speed;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-iteration-count:infinite;
+    clip: rect(0, 30px, 80px, 0);
+}
+@-webkit-keyframes bullet{
+    0%{
+        opacity:1;
+        -webkit-transform:translate(0);
+    }
+    100%{
+        -webkit-transform:translate(800px);
+        opacity:1;
+    }
+}
+    .bullet{
+        width:20px;
+        height:20px;
+        background:#f90;
+        border-radius:50%;
+        position:absolute;
+        left:51%;
+        top:51%;
+        opacity:0;
+        -webkit-animation-name:bullet;
+        -webkit-animation-duration:2s;
+        -webkit-animation-delay: 2s;
+        -webkit-animation-timing-function:ease-out-in;
+        -webkit-animation-iteration-count:infinite;
+    }
+</style>
+<p style=""class="b-arrow"></p>
+<div id="box">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div id="d" class="d"> <span></span> <span></span> <span></span> <span></span></div>
+<b id="speed"></b>
+<span class="bullet"></span>
+</body>
+</html>
