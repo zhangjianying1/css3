@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>彩米彩票-关于彩米</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="bookmark" href="/favicon.ico"/>
+<meta name="Keywords" content="彩米彩票,彩票,乐透,开奖,理财,赌博,专家,预测,缩水,直播,足球,竞彩,摇奖,双色球,500,11选5,快3" />
+<meta name="author" content="彩米彩票" />
+<meta name="Description" content="彩米彩票囊括手机购彩、开奖直播、分析预测、资讯图表、盈利工具等多种专业服务，并为每一位彩民提供量身定制的购彩个性化体验，让您随时随地都能体会中奖的喜悦。" />
+    <link rel="stylesheet" href="http://wuxian.baidu.com/baidusearch/static/css/jquery.fullPage.css">
+    <style>
+        *{ margin:0; padding:0}
+        html{ height:100%; width:100%; overflow:hidden;}
+        body{ height:100%; width:100%; overflow:hidden;}
+        .wrap{
+            width:100%;
+            -webkit-transform:translate(0, 0);
+            -webkit-transition:all ease-in .5s;
+        }
+        .box{
+            width:100%;
+            display:table;
+
+        }
+        .box div{
+            display:table-cell;
+            text-align:center;
+            vertical-align: middle;
+        }
+        .box:nth-of-type(1){
+            background:#008000;
+        }
+        .box:nth-of-type(2){
+            background:#0000ff;
+        }
+        .box:nth-of-type(3){
+            background:#0099ff;
+        }
+        .box:nth-of-type(4){
+            background: #374E0C;
+        }
+    </style>
+
+</head>
+<div class="wrap" id="fullpage">
+    <div class="box section fp-section fp-table"><div>1</div></div>
+    <div class="box section fp-section fp-table"><div>2</div></div>
+    <div class="box section fp-section fp-table"><div>
+        <div class="slide">第三屏的第一屏</div>
+        <div class="slide">第三屏的第二屏</div>
+        <div class="slide">第三屏的第三屏</div>
+        <div class="slide">第三屏的第四屏</div></div></div>
+    <div class="box section fp-section fp-table"><div>4</div></div>
+</div>
+
+<script type="text/javascript" src="dest/jquery-1.9.1.min.js"></script>
+<script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="http://cdn.dowebok.com/77/js/jquery.fullPage-2.2.2.min.js"></script>
+<script>
+    console.log(window)
+var Scorll = function(){
+    this.init();
+};
+Scorll.prototype = {
+    constructor: Scorll,
+    init: function(){
+
+        var oBoxs = document.querySelectorAll('.box');
+        var a = function(){
+            var iClientH = document.documentElement.clientHeight;
+            for(var i= 0, len = oBoxs.length; i<len; i ++){
+                oBoxs[i].style.height = iClientH + 'px';
+            }
+        }
+        a();
+        window.onresize = function(){
+            setTimeout(a, 100);
+        };
+    }
+
+}
+</script>
+<script>
+    $(function(){
+        $('#fullpage').fullpage({
+            navigation: true,
+            slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+            css3: !0,
+            loopBottom: !1,
+            scrollingSpeed: 800,
+            keyboardScrolling: !0
+        });
+    });
+</script>
+
+</body>
+</html>
